@@ -1,9 +1,18 @@
-for productos in range(1, 9):
-    respuesta = input(f"El producto {productos} esta vencido? si/no: ").lower()
-    
-    if respuesta == "si":
-        print("Alerta!! Retirar producto")
-        break  # Se detiene solo si hay un vencido
-else: 
-    # Este bloque solo se ejecuta si el ciclo termina sin encontrar un 'break'
-    print("Todo en orden")
+energia_total = 0
+while energia_total < 100:
+    energia_sumada = int(input("Ingrese una cantidad de energia al cohete: "))
+    if energia_sumada <= 0:
+        print("Error: no puedes quitar energia o la cantidad es erronea.")
+    elif energia_sumada == 100:
+        energia_total += energia_sumada
+    elif energia_sumada > 0 and energia_sumada <= 100:
+        energia_total += energia_sumada
+        print(f"Has cargado {energia_sumada} % -->|hay {energia_total} % hasta ahora|<--")
+    else:
+        print("Has puesto mas de la energia solicitada para despegar.")
+print(f"Has llegado a | {energia_total} % | preparate para el despegue...")
+contador = 3
+while contador >= 1:
+    print(f"      | {contador} |")
+    contador -= 1
+print("---> DESPEGUE <---")
