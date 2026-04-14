@@ -1,3 +1,4 @@
+#Ejercicio 1
 print("--|Bienvenido a la estación de servicio [Santo Tomas]|--")
 for bomba in range(1, 4):
     print(f"\n--|Revisando Bomba {bomba}|--")
