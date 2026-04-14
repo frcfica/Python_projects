@@ -10,4 +10,12 @@ for bomba in range(1, 4):
     else:
         print(f"Saltando Bomba {bomba}...")
         continue
+<<<<<<< Updated upstream
 print("\n--|Proceso de carga de bombas finalizado|--")
+=======
+<<<<<<< HEAD
+print("\n--|Proceso de carga de bombas finalizado|--")
+=======
+print("\n--|Proceso de carga de bombas finalizado|--")
+>>>>>>> 5551915ddeefbc581f64e5fd6f51d821bbcf11f1
+>>>>>>> Stashed changes
