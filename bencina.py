@@ -10,4 +10,4 @@ for bomba in range(1, 4):
     else:
         print(f"Saltando Bomba {bomba}...")
         continue
-print("\n--|Proceso de revisión de bombas finalizado|--")
+print("\n--|Proceso de carga de bombas finalizado|--")
