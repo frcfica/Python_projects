@@ -1,5 +1,4 @@
 """ En el código unificado, usamos sys.exit(). Esta función le dice a Python: "Cierra el programa completamente y deja de ejecutar cualquier línea de código ahora mismo".
-
 Es la forma más "limpia" y profesional de terminar un programa desde adentro de una función o un bucle infinito (while True). """
 
 import sys
