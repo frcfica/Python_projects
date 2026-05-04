@@ -76,17 +76,29 @@ def login():
 # PAREJA 4: OPERACIONES (RETIRO)
 # ==========================================================
 def retirar(usuario):
-    monto = float(input("Monto a retirar: "))
-    if monto > usuario.saldo:
-        print("Saldo insuficiente")
-    else:
-        confirmar = input("Confirme su clave para retirar: ")
-        if confirmar == usuario.password:
-            usuario.saldo -= monto
-            print(f"Retiro exitoso. Saldo: {usuario.saldo}")
-        else:
-            print("Clave incorrecta")
+    try:
+        monto = float(input("Monto a retirar: "))
+        
+        # Validar que no sea negativo ni cero
+        if monto <= 0:
+            print("Error: El monto debe ser una cantidad positiva.")
+            return
 
+        if monto > usuario.saldo:
+            print("Saldo insuficiente.")
+        else:
+            confirmar = input("Confirme su clave para retirar: ")
+            if confirmar == usuario.password:
+                usuario.saldo -= monto
+                print("--------------------------------")
+                print(f"Retiro exitoso. Entregando: ${monto}")
+                print(f"Saldo restante: ${usuario.saldo}")
+                print("--------------------------------")
+            else:
+                print("Clave incorrecta. Operación cancelada.")
+                
+    except ValueError:
+        print("Error: Por favor, ingrese solo números para el monto.")
 # ==========================================================
 # PAREJA 5: MENÚS Y UNIÓN
 # ==========================================================
